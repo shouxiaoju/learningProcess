@@ -49,5 +49,3 @@ git pull 等效于先执行 git fetch origin 当前分支名, 再执行 git merg
 2. 直接使用 pull 命令，将远程仓库的目标分支合并到本地的分支：
    - git checkout yy
    - git pull origin xx
-
-hasxsjabcjabjkcbaj
