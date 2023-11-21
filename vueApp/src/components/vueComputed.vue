@@ -24,6 +24,14 @@
       line-numbers
     ></prism-editor>
     <p>计算属性是基于它们的依赖项的值结果进行缓存的，只要依赖的变量不变, 都直接从缓存取结果, 依赖变化重新计算结果存入缓存, 比普通方法性能更高。</p>
+    <h3>vue计算属性-完整写法</h3>
+    <prism-editor
+      class="my-editor"
+      v-model="allPom"
+      :highlight="highlighter"
+      readonly
+      line-numbers
+    ></prism-editor>
   </div>
 </template>
 
@@ -79,7 +87,27 @@ export default {
         "           },\n"+
         "       })\n" +
         "   <script>\n" +
-        "</body>"
+        "</body>",
+        allPom:
+        "   <script>\n" +
+        "       const vm = new Vue({\n" +
+        "           data(): {\n" +
+        "              return {\n" +
+        "                  message:'Hello'," +
+        "              }\n" +
+        "           },\n" +
+        "           comouted: {\n"+
+        "               属性名: {\n"+
+        "                   set(val) {\n"+
+        "                       console.log(val)\n"+
+        "                   },\n"+
+        "                   get() {\n"+
+        "                       return '处理后的值' \n"+
+        "                    }\n"+
+        "               }\n"+
+        "           },\n"+
+        "       })\n" +
+        "   <script>\n" 
     };
   },
   methods: {

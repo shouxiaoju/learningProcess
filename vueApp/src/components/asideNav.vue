@@ -13,6 +13,12 @@
           <el-menu-item index="/vueComputed">
               vue计算属性
           </el-menu-item>
+          <el-menu-item index="/vueWatch">
+              vue侦听器
+          </el-menu-item>
+          <el-menu-item index="/lifeCycle">
+              vue生命周期
+          </el-menu-item>
     </el-menu>
     </div>
 </template>
@@ -28,7 +34,13 @@ export default {
        }
    },
    mounted(){
-       this.defaultActive=this.$route.path
+       console.log('this.$route.path',this.$route.path);
+       if(this.$route.path==="/"){
+            this.defaultActive='/vueCommands'
+       }else{
+            this.defaultActive=this.$route.path
+       }
+       
    }
        
 }
