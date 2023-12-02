@@ -15,3 +15,7 @@
 3. webpack 学习
 
    - 分支名 feature/webpack-learn
+
+4. ajax 学习
+
+   - 分支名 feature/ajax-learn
